@@ -176,7 +176,7 @@ def mosaic(image_file_list, image_dir, label_dir, output_image_dir, output_label
     
     # save the augmented image and labels (bounding boxes)
     utils.save_img(new_img, image_store_path )
-    utils.save_label(new_bboxes, new_class_labels, label_store_path,  image_store_path)
+    utils.save_label(new_bboxes, new_class_labels, label_store_path)
 
     """ If you want to see the augmented with their bounding boxes, if not please COMMENT row below """
     utils.display_img(image_store_path, label_store_path)
@@ -189,7 +189,7 @@ if __name__ == "__main__":
     ap.add_argument("--scale_x", required=True, type=float, help="scale_x - scale by width => define width of the top left image")
     ap.add_argument("--scale_y", required=True, type=float, help="scale_y - scale by height => define height of the top left image")
     ap.add_argument("--min_area", default=200, type=int, help="min area of box after augmentation we will keep")
-    ap.add_argument("--min_vi", default=0.1, type=float, help="min area ratio of box after/before we will keep")
+    ap.add_argument("--min_vi", default=0.1, type=float, help="min area ratio of box after/before augmentation we will keep")
     args = vars(ap.parse_args())
 
     # width and height of mosaic-augmented image

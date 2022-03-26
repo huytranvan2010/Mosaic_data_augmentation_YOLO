@@ -1,4 +1,4 @@
-**This is an implementaion for mosaic image augmention with YOLO format**
+**This is an implementation for mosaic image augmention with YOLO format**
 
 Run code to perform mosaic augmentation:
 ```python
@@ -10,6 +10,13 @@ You can change parameters to fit with your dataset. To know details about argume
 ```python
 python main.py --help
 ```
+- `--width`: width of mosaic-augmented image
+- `--height`: height of mosaic-augmented image
+- `--scale_x`: scale by width => define width of the top left image
+- `--scale_y`: scale_y - scale by height => define height of the top left image
+- `--min_area`: min area of box after augmentation we will keep
+- `--min_vi`: min area ratio of box after/before augmentation we will keep
+
 **Notes**
 - Original images in the folder `images`
 - Orginal labels (bounding boxes) in the folder `labels`

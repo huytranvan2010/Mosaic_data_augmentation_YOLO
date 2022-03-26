@@ -79,13 +79,12 @@ def read_label(label_path):
         class_labels.append(cont[0])
     return (bboxes, class_labels)
 
-def save_label(bboxes, class_labels, label_path, image_path):
+def save_label(bboxes, class_labels, label_path):
     """
         Save the label
     """
     # create an empty list
     tem_lst = []
-    img = cv2.imread(image_path)
     for i, bbox in enumerate(bboxes):
         tem_lst.append(class_labels[i] + ' ' + str(bbox[0]) + ' ' + str(bbox[1]) + ' ' + str(bbox[2]) + ' ' + str(bbox[3]) + '\n')
 
