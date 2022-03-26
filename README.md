@@ -29,6 +29,7 @@ Output mosaic augmented image with YOLO format
 Mosaic-augmented image                                    |  Image with bboxes
 :--------------------------------------------------------:|:-------------------------:
 <img src="augmentation/mosaic_images/mo_7_9_6_10.jpg">    |  <img src="demo/demo_1.png">
+
 **Notes**
 - Original images in the folder `images`
 - Orginal labels (bounding boxes) in the folder `labels`
